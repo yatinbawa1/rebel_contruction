@@ -1,0 +1,75 @@
+.reviews{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem
+    ;
+}
+
+.Card {
+    background-color: #F4F2DA;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+.CardHeader {
+    margin-bottom: 1rem;
+}
+.CardHeading {
+    color:#646461;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.CardPara {
+    color:#646464;
+}
+
+.CardFooter {
+    font-size: 2rem;
+}
+
+.CardName::before {
+    content: "By: ";
+    font-weight: 700;
+}
+
+.CardName {
+    color: #605B5B;
+    font-size: 1rem;
+}
+
+.CardAdressColumn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: -10px;
+}
+.CardAdress {
+    font-size: 1rem;
+    margin-left: .5rem;
+    color: #A4A4A4;
+}
+
+.CardButton {
+    width: 100%;
+    padding: 15px 0px;
+    margin-top: auto;
+    background-color: #515D86;
+    color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    .reviews {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:700px) {
+    .reviews{ 
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+}

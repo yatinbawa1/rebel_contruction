@@ -1,0 +1,160 @@
+.why-us-finance {
+    display: flex;
+}
+.left-finance {
+    flex: 1;
+}
+
+.finance-button {
+    background-color: #3C3935;
+    margin: 2rem;
+    margin-top: 0;
+    font-weight: 400;
+    padding: 0px 40px;
+    border-radius: 4px;
+    color: aliceblue;
+}
+
+.right-finance {
+    flex: 1;
+    position: relative;
+}
+
+.keyhole {
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    aspect-ratio: 4 / 3.5;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    transition: all .2s ease-out;
+}
+
+.keyhole-1 {
+    transform: translateX(-80px) translateY(-150px);
+}
+
+.keyhole-2 {
+    transform: translateX(-120px) translateY(30px);
+}
+
+.keyhole-3 {
+    transform: translateX(-200px) translateY(-100px);
+}
+
+.keyhole-1:hover {
+    z-index: 11;
+    transform:  translateX(-80px) translateY(-150px) scale(1.2);
+    outline-style: dashed;
+    outline-offset: 1rem;
+    outline-color: greenyellow;
+}
+
+.keyhole-2:hover {
+    z-index: 11;
+    transform:translateX(-120px) translateY(30px) scale(1.2);
+    outline-style: dashed;
+    outline-offset: 1rem;
+    outline-color: greenyellow;
+}
+
+
+.keyhole-3:hover {
+    z-index: 11;
+    transform: translateX(-200px) translateY(-100px) scale(1.2);
+    outline-style: dashed;
+    outline-offset: 1rem;
+    outline-color: greenyellow;
+}
+
+.paragraph {
+    height: 200px;
+    margin: 2rem;
+    color: rgb(109, 109, 109);
+    margin-bottom: 1rem;
+}
+
+.paragraph:last-child {
+    margin: 0;
+    margin-top: 1rem;
+}
+
+
+@media screen and (max-width:1135px)  {
+    .why-us-finance {
+        flex-direction: column;
+        margin: 0rem
+    }
+
+    .right-finance {
+        display: flex;
+        flex-direction: column;
+      }
+
+    .keyhole {
+        top: 0%;
+        left: 0%;
+        margin: auto;
+        width: 100%;
+        height: auto;
+        margin-top: 5px;
+        position: relative; 
+    }
+
+    .right-finance {
+        margin: 2rem;
+    }
+
+    .keyhole-1 {
+        transform: none;
+    }
+    
+    .keyhole-2 {
+        transform: none;
+    }
+    
+    .keyhole-3 {
+        transform: none;
+    }
+
+     .keyhole-1:hover {
+         transform: none;
+     }
+     
+     .keyhole-2:hover {
+         transform: none;
+     }
+     
+     .keyhole-3:hover {
+         transform: none;
+     }
+     
+    .paragraph {
+        margin: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .finance-button {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width:435px)  {
+    .tertiary-heading{
+        font-size: 2rem;
+    }
+    .paragraph {
+        margin-bottom:5rem;
+    }
+}
+
+@media screen and (max-width:380px)  {
+    
+    .paragraph {
+        margin-bottom:10rem;
+    }
+    .paragraph:last-child {
+        margin-bottom: 5rem;
+    }
+}

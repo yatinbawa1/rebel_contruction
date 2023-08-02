@@ -1,0 +1,129 @@
+.Navbar {
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh / 9);
+    background: #F4F2DA;
+    display: flex;
+    z-index: 5000;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.brand {    
+    margin-left: 20px;
+    display: flex;
+    align-content: center;
+    flex:1;
+}
+
+.toggle-for-navbar {
+    align-self: center;
+    margin-left: auto;
+    margin-right: 10vw;
+    display: none;
+}
+
+.content {
+    flex:1;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.link:first-child {
+    margin-left: auto;
+}
+.link:last-child {
+    margin-right: 3rem;
+}
+
+.link {
+    margin-right: 1rem;
+    color: #6E6A6A;
+    cursor: pointer;
+    transition: color .25s ease-in;
+    position: relative;
+}
+
+.link:hover {
+    color: #454343
+}
+
+.link::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background-color: #454343;
+    transition: all .2s ease-out;
+}
+
+.link:hover::before {
+    width: 100%;
+}
+
+.active1 {
+    color: #0e0e0e !important;
+    font-weight: 600;
+}
+
+
+
+@media screen and (max-width:825px) {
+    .content {
+        gap: 1rem;
+    }
+} 
+
+@media screen and (max-width:700px) {
+    .toggle-for-navbar {
+        display: block;
+    }
+    .Navbar {
+        
+        flex-direction: column;
+        transition: all .2s ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    .Navbar-Open {
+        background: #F6E9E1;
+        height: 100vh;
+    }
+
+    .brand {
+        flex: 1;
+        height: 100%;
+        margin-left: 0;
+    }
+    .Navbar-Open .content {
+        flex: 6;
+        padding: 10vw 5vh;
+        flex-direction: column;
+    }
+
+    .Navbar-Close .content  {
+        display: none;
+    }
+
+    .link:first-child {
+        margin-left: 0%;
+    }
+    .link {
+        color: #6E6A6A;
+    }
+
+    .link:hover {
+        color: #454343
+    }
+
+    .link::before {
+        background-color:transparent;
+    }
+
+    .active1 {
+        color: #0e0e0e !important;
+    }
+} 

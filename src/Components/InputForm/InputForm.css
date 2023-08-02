@@ -1,0 +1,41 @@
+.InputFrom {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    gap: 1rem;
+    align-items: center;
+    border-bottom: 1px solid #3B3B3B;
+    padding-bottom: 3rem;
+}
+
+.input {
+    width: 40vw;
+    padding: 1.2rem 2rem;
+}
+
+.input-text {
+    background-color: #353131;
+    box-shadow: none;
+    color: #fff;
+    border: none;
+}
+
+.input:placeholder-shown {
+    color: #585858;
+}
+
+.send-button {
+    background-color: #C4D6DD;
+    color: #171653;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color:#075E54;
+}
+
+@media screen and (max-width:700px){
+    .input {
+        width: 80vw;
+    }
+}
